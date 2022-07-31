@@ -1,0 +1,16 @@
+|problem2_17201066
+Y <= G.DB_MAX_OUTPUT_PORT_TYPE
+A => a5.IN0
+A => a4.IN0
+A => a3.IN0
+A => a2.IN0
+B => a5.IN1
+B => a3.IN1
+B => a4.IN1
+B => a2.IN1
+C => b5.IN1
+C => b2.IN0
+C => b4.IN0
+C => b3.IN0
+
+

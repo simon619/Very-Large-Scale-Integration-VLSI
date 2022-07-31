@@ -1,0 +1,23 @@
+module Problem1_17201066(W, F);
+    input [2:0] W;
+    output reg [1:0] F;
+        always @(W)
+            begin
+                case(W)
+                    0 : F = 3;
+                    1 : F = 0;
+                    2 : F = 1;
+                    3 : F = 2;
+                    4 : F = 2;
+                    5 : F = 1;
+                    6 : F = 0;
+                    7 : F = 3;
+                    default : F = 1'bx;
+                 endcase
+             end
+endmodule
+                       
+
+
+
+    

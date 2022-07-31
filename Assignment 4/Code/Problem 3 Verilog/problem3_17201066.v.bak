@@ -1,0 +1,12 @@
+module problem3_17201066(B, C, D, y, x);
+	input B, C, D;
+	output x, y;
+	and(a, C, D);
+	or(b, C. D);
+	not(c, b);
+	or(y, c, a);
+	and(d, c, B);
+	not(e, B);
+	and(f, b, e);
+	or(x, d, f);
+endmodule 

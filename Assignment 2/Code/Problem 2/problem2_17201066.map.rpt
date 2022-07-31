@@ -1,0 +1,332 @@
+Analysis & Synthesis report for problem2_17201066
+Mon Dec 06 22:24:16 2021
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |problem2_17201066|y
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |problem2_17201066
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                            ;
++-------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Mon Dec 06 22:24:16 2021   ;
+; Quartus II Version            ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name                 ; problem2_17201066                       ;
+; Top-level Entity Name         ; problem2_17201066                       ;
+; Family                        ; Stratix II                              ;
+; Logic utilization             ; N/A                                     ;
+;     Combinational ALUTs       ; 17                                      ;
+;     Dedicated logic registers ; 4                                       ;
+; Total registers               ; 4                                       ;
+; Total pins                    ; 7                                       ;
+; Total virtual pins            ; 0                                       ;
+; Total block memory bits       ; 0                                       ;
+; DSP block 9-bit elements      ; 0                                       ;
+; Total PLLs                    ; 0                                       ;
+; Total DLLs                    ; 0                                       ;
++-------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                          ; problem2_17201066  ; problem2_17201066  ;
+; Family name                                                    ; Stratix II         ; Stratix II         ;
+; Type of Retiming Performed During Resynthesis                  ; Full               ;                    ;
+; Resynthesis Optimization Effort                                ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                       ; Normal             ;                    ;
+; Use Generated Physical Constraints File                        ; On                 ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Perform gate-level register retiming                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax         ; On                 ; On                 ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+; problem2_17201066.v              ; yes             ; User Verilog HDL File  ; C:/Users/ASUS/Desktop/CSE460 Lab/Lab Assignment 2/Problem2/problem2_17201066.v ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 17    ;
+; Dedicated logic registers                     ; 4     ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 0     ;
+;                                               ;       ;
+; Total combinational functions                 ; 17    ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 1     ;
+;     -- 5 input functions                      ; 2     ;
+;     -- 4 input functions                      ; 3     ;
+;     -- <=3 input functions                    ; 11    ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 17    ;
+;     -- extended LUT mode                      ; 0     ;
+;     -- arithmetic mode                        ; 0     ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 17    ;
+;                                               ;       ;
+; Total registers                               ; 4     ;
+;     -- Dedicated logic registers              ; 4     ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 9     ;
+;                                               ;       ;
+; I/O pins                                      ; 7     ;
+; Maximum fan-out node                          ; w[2]  ;
+; Maximum fan-out                               ; 9     ;
+; Total fan-out                                 ; 73    ;
+; Average fan-out                               ; 2.61  ;
++-----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |problem2_17201066         ; 17 (17)           ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 7    ; 0            ; |problem2_17201066  ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------+
+; State Machine - |problem2_17201066|y ;
++------+-----+-----+-----+-------------+
+; Name ; y.D ; y.C ; y.B ; y.A         ;
++------+-----+-----+-----+-------------+
+; y.A  ; 0   ; 0   ; 0   ; 0           ;
+; y.B  ; 0   ; 0   ; 1   ; 1           ;
+; y.C  ; 0   ; 1   ; 0   ; 1           ;
+; y.D  ; 1   ; 0   ; 0   ; 1           ;
++------+-----+-----+-----+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; Q$latch                                            ; comb~0              ; yes                    ;
+; Ch[0]$latch                                        ; Q~3                 ; yes                    ;
+; Ch[1]$latch                                        ; Q~3                 ; yes                    ;
+; Y.D_287                                            ; comb~0              ; yes                    ;
+; Y.C_315                                            ; comb~0              ; yes                    ;
+; Y.B_343                                            ; comb~0              ; yes                    ;
+; Y.A_371                                            ; comb~0              ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; y~14                                  ; Lost fanout        ;
+; y~15                                  ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |problem2_17201066 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                          ;
+; B              ; 01    ; Unsigned Binary                                          ;
+; C              ; 10    ; Unsigned Binary                                          ;
+; D              ; 11    ; Unsigned Binary                                          ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Mon Dec 06 22:24:15 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off problem2_17201066 -c problem2_17201066
+Info: Found 1 design units, including 1 entities, in source file problem2_17201066.v
+    Info: Found entity 1: problem2_17201066
+Warning: EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning: EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning: EDA synthesis tool is specified as "Custom", but GND is not specified
+Info: Elaborating entity "problem2_17201066" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at problem2_17201066.v(8): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at problem2_17201066.v(8): inferring latch(es) for variable "Ch", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at problem2_17201066.v(8): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Y.D" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Y.C" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Y.B" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Y.A" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Ch[0]" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Ch[1]" at problem2_17201066.v(8)
+Info (10041): Inferred latch for "Q" at problem2_17201066.v(8)
+Warning: Latch Q$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal w[2]
+Warning: Latch Ch[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal y.C
+Warning: Latch Ch[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal y.C
+Warning: Latch Y.D_287 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal w[2]
+Warning: Latch Y.C_315 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal w[2]
+Warning: Latch Y.B_343 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal w[2]
+Warning: Latch Y.A_371 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal w[2]
+Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
+    Info: Register "y~14" lost all its fanouts during netlist optimizations.
+    Info: Register "y~15" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/ASUS/Desktop/CSE460 Lab/Lab Assignment 2/Problem2/problem2_17201066.map.smsg
+Info: Implemented 27 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
+    Info: Implemented 3 output pins
+    Info: Implemented 20 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 221 megabytes
+    Info: Processing ended: Mon Dec 06 22:24:16 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/ASUS/Desktop/CSE460 Lab/Lab Assignment 2/Problem2/problem2_17201066.map.smsg.
+
+

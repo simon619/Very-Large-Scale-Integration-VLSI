@@ -1,0 +1,14 @@
+|problem2_17201066
+Clk => y~0.IN1
+Resetn => y~1.IN1
+w[1] => always0~2.IN0
+w[1] => always0~0.IN0
+w[1] => always0~1.IN0
+w[2] => always0~0.IN1
+w[2] => always0~1.IN1
+w[2] => always0~2.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+Ch[0] <= Ch[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Ch[1] <= Ch[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

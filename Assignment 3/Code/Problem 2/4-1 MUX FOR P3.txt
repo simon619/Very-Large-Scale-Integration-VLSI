@@ -1,0 +1,28 @@
+// DSCH 2.7a
+// 12/9/2021 2:06:05 PM
+// C:\Users\ASUS\Desktop\CSE460 Lab\Export dsch2\Export dsch2\Lab 4\Lab Assignment 3\Problem2_17201066\4-1 MUX FOR P3.sch
+
+module 4-1 MUX FOR P3( IN0,IN1,IN2,IN3,S1,S0,out1);
+ input IN0,IN1,IN2,IN3,S1,S0;
+ output out1;
+ mux #(10) mux(w4,IN0,IN1,S1);
+ mux #(10) mux(w7,IN2,IN3,S1);
+ mux #(10) mux(out1,w4,w7,S0);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 IN0=~IN0;
+#2000 IN1=~IN1;
+#4000 IN2=~IN2;
+#8000 IN3=~IN3;
+#16000 S1=~S1;
+#32000 S0=~S0;
+
+// Simulation parameters
+// IN0 CLK 10 10
+// IN1 CLK 20 20
+// IN2 CLK 40 40
+// IN3 CLK 80 80
+// S1 CLK 160 160
+// S0 CLK 320 320
